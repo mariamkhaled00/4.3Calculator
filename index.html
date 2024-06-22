@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      * {
+            font-family: monospace;
+            font-weight: bolder;
+        }
+        body {
+            background-color: #394461;
+        }
+        input {
+            background-color: #EAE3DB;
+            margin: 5px;
+            font-size: 20px;
+            width: 90%;
+            border-radius: 5px;
+            text-align: center;
+        }
+        button {
+            background-color: #D13F30;
+            color: #FDFEFE;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+        .userInput {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            background-color: #252D44;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .result {
+            background-color: #181F32;
+            color: #FDFEFE;
+            padding: 5px;
+            text-align: right;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 30px;
+        }
+   
+    </style>
+</head>
+
+<body>
+    <h3 class="result" id="result">0</h3>
+    <div class="container">
+        <div class="userInput">
+            <input type="text" placeholder="0" id="num1">
+            <input type="text" placeholder="0" id="num2">
+        </div>
+        <div class="buttons">
+            <button onclick="add()">add</button>
+            <button onclick="subt()">subt</button>
+            <button onclick="multi()">multi</button>
+            <button onclick="divide()">divide</button>
+        </div>
+        <script>
+            function add() {
+                let num1 = parseFloat(document.getElementById("num1").value);
+                let num2 = parseFloat(document.getElementById("num2").value);
+                let result = num1 + num2;
+                document.getElementById("result").innerHTML =  result;
+            }
+            function subt() {
+                let num1 = parseFloat(document.getElementById("num1").value);
+                let num2 = parseFloat(document.getElementById("num2").value);
+                let result = num1 - num2;
+                document.getElementById("result").innerHTML =  result;
+
+            }
+            function multi() {
+                let num1 = parseFloat(document.getElementById("num1").value);
+                let num2 = parseFloat(document.getElementById("num2").value);
+                let result = num1 * num2;
+                document.getElementById("result").innerHTML =  result;
+            }
+            function divide() {
+                let num1 = parseFloat(document.getElementById("num1").value);
+                let num2 = parseFloat(document.getElementById("num2").value);
+                let result = num1 / num2;
+                document.getElementById("result").innerHTML =  result;
+            }
+        </script>
+
+</body>
+
+</html>
